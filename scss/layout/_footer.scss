@@ -1,0 +1,43 @@
+footer{
+
+	width: 100%;
+	position: relative;
+	padding: 0.5em;
+	bottom: 0;
+	background-color: darkgrey;
+	@media #{$brk-narrow}{
+		margin-top: -1px;
+	}
+	@media #{$brk-wide}{
+		margin-top: 15px;
+		box-shadow:  0px -5px 5px 0px #999;		
+	}
+}
+@media (min-width : 768px ) {
+	.footer{
+		&-bar{
+			padding: 5em 0;
+			vertical-align: top;
+		}
+		
+
+		&-nav,
+		&-nav li,
+		&-bar h5{
+			margin: 0;
+			padding: 0;
+		}
+		&-nav{
+			float: right;
+		}
+	}
+
+	.back-to-top{
+		display: none;
+	}
+	.hide{
+		margin-top: 2em;
+		float: left;
+		display: inline-block;
+	}
+}

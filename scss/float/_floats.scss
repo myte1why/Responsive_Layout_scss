@@ -1,0 +1,12 @@
+.back-to-top{
+	float: right;
+}
+.footer-name-text{
+	float: left;
+}
+/* float clearfix */
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}

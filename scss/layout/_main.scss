@@ -1,0 +1,28 @@
+
+.eng{
+	margin-bottom: 0;
+	background:linear-gradient(rgba(134, 134, 230, 0.34),rgba(0, 0, 255, 0.17));
+}
+.tr{
+	margin-top: 0;
+	background:linear-gradient( rgba(255, 0, 0, 0.19), rgba(243, 160, 160, 0.26) );
+}	
+
+.knowledge{
+	@extend %padding1;
+    background-color: darkslateblue;
+	@media #{$brk-narrow}{
+		padding-top: 1em;
+		margin-left: 5%;
+		width: 20%;
+		float: left;
+	}
+}
+@media (min-width : 768px ) {
+
+	.knowledge{
+		li{
+			padding-bottom:1em; 
+		}
+	} 
+}

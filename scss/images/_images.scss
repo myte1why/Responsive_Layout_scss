@@ -1,0 +1,19 @@
+.content-img,
+.profile-image{
+	width: 100%;
+}
+.wrapper{
+	.profile-image{
+		border-radius: 50%;
+		@media #{$brk-narrow}{
+		float: right;
+		width: 15%;
+
+		}
+	}
+	.profile-image:hover{
+		@media #{$brk-wide}{
+	  		transform: scale(1.1) rotate(7deg);
+			}
+	}
+}

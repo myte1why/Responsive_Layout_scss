@@ -1,0 +1,20 @@
+header{
+	width: 100%;
+	background-color: darkgrey;
+}
+
+@media (min-width : 768px ) {
+	
+	.main-nav li{
+		width: auto;
+		display: inline-block;
+	}
+}
+
+@media (min-width : 1024px ) {
+	.main-nav{
+		float: right;
+		padding-top: 1em;
+	}
+
+}

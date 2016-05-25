@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+	font-size: 14px;
+}
+body {
+	@include text(1em, 1.5, $color: $black); 
+	font-family: $stack-helvetica;
+	position: relative;
+	line-height: 1.6;
+	background: rgba(241, 241, 241, 0.7);
+}
+
+/* link styles */
+a {	
+	&:link {		
+		font-family: $stack-sans-serif;
+		@extend %displayBlock;
+		text-decoration: none;
+		color: $textgrey;
+	}
+	&:hover {
+		@include text(1.1em, 1.5, $color: #6633ff); 
+		font-family: $stack-sans-serif;
+	}
+	&:visited{
+		font-family: $stack-sans-serif;
+		color:$textgrey;
+	}
+}
+
+footer a,
+.main-nav a {
+	@extend %displayBlock;
+	text-decoration: none;
+	color: $black;
+}
+footer a:hover,
+.main-nav a:hover {
+	font-size: 1.1em;
+	color: $hover;
+}
+footer a:visited,
+.main-nav a:visited{
+	color: $black;
+}
+/* hidden */
+
+.hide{
+	display: none;
+}
+@media (min-width : 768px ) {
+	body{
+		background:linear-gradient(white 45%, darkgrey);
+	}
+	.main-nav a,
+	.footer-nav a{
+		font-size: 0.90em;
+		margin-right: 0.5em;
+	}
+
+	.box_shadow{
+	    box-shadow: 1px 1px 0px $textgrey,
+                2px 2px 0px $textgrey,
+                3px 3px 0px $textgrey,
+                4px 4px 0px $textgrey,
+                5px 5px 0px $textgrey,
+                6px 6px 0px $textgrey;
+	}
+}
+@media (min-width : 1024px ){
+	
+	.name{
+		float: left;
+	}
+	.border{
+		border-top: solid 1px black;
+	}
+	.box_lighter:hover{
+		 box-shadow:	1px 1px 0px #9696C8,
+		                2px 2px 0px #9696C8,
+		                3px 3px 0px #9696C8,
+		                4px 4px 0px #9696C8,
+		                5px 5px 0px #9696C8,
+		                6px 6px 0px #9696C8;
+	}
+}

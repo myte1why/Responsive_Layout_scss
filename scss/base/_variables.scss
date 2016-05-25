@@ -1,0 +1,17 @@
+// Descriptive color variables
+
+$white          : #fff;
+$black          : #000;
+$grey           : #878787;
+$hover			: #6633ff;
+$textgrey		: #999;
+
+// Font stacks
+
+$stack-sans-serif	: Arial, sans-serif;
+$stack-helvetica	:'Helvetica Neue',$stack-sans-serif;
+
+// Media query breakpoints
+
+$brk-narrow	:'(min-width: 768px)';
+$brk-wide	:'(min-width: 1024px)';
