@@ -3,5 +3,15 @@
 	font-size: $size;
 	line-height: $lhight;
 	font-weight: $weight;
-	color: $color;
+	color: $color;	
+	font-family: $stack-helvetica;
+}
+@mixin wrapper-calc($width){
+		width: $width;
+		max-width: 1250px;
+}
+@mixin margin-width($marginR,$marginB,$width){	
+			margin-bottom: $marginB;
+		    margin-right: $marginR;
+		    width: $width;
 }

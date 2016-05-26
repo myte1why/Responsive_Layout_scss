@@ -1,20 +1,16 @@
 header{
 	width: 100%;
-	background-color: darkgrey;
+	background-color: $grey;
 }
-
-@media (min-width : 768px ) {
-	
-	.main-nav li{
+.main-nav{
+	@media #{$brk-narrow}{
+	 li{
 		width: auto;
 		display: inline-block;
+		}
 	}
-}
-
-@media (min-width : 1024px ) {
-	.main-nav{
+	@media #{$brk-wide}{
 		float: right;
 		padding-top: 1em;
 	}
-
 }

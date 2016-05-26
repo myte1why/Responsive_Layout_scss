@@ -3,28 +3,27 @@
 	font-size: 14px;
 }
 body {
-	@include text(1em, 1.5, $color: $black); 
-	font-family: $stack-helvetica;
+	@include text($standart-font, 1.5, $color: $black); 
 	position: relative;
-	line-height: 1.6;
 	background: rgba(241, 241, 241, 0.7);
+	@media #{$brk-narrow}{		
+		background:linear-gradient(white 45%, darkgrey);
+	}
 }
 
 /* link styles */
 a {	
-	&:link {		
-		font-family: $stack-sans-serif;
+	&:link {	
+		@include text($standart-font, 1.5, $color: $textgrey); 	
 		@extend %displayBlock;
 		text-decoration: none;
 		color: $textgrey;
 	}
 	&:hover {
-		@include text(1.1em, 1.5, $color: #6633ff); 
-		font-family: $stack-sans-serif;
+		@include text($medium-font, 1.5, $color: #6633ff); 
 	}
-	&:visited{
-		font-family: $stack-sans-serif;
-		color:$textgrey;
+	&:visited{	
+		@include text($standart-font, 1.5, $color: $textgrey);
 	}
 }
 
@@ -33,15 +32,18 @@ footer a,
 	@extend %displayBlock;
 	text-decoration: none;
 	color: $black;
-}
-footer a:hover,
-.main-nav a:hover {
-	font-size: 1.1em;
-	color: $hover;
-}
-footer a:visited,
-.main-nav a:visited{
-	color: $black;
+	&:hover{		
+			font-size: $medium-font;
+			color: $hover;
+		}
+		&:visited{			
+			color: $black;
+		}
+
+	@media #{$brk-narrow}{		
+		font-size: $standart-font;
+		margin-right: 0.5em;
+	}
 }
 /* hidden */
 
@@ -49,14 +51,6 @@ footer a:visited,
 	display: none;
 }
 @media (min-width : 768px ) {
-	body{
-		background:linear-gradient(white 45%, darkgrey);
-	}
-	.main-nav a,
-	.footer-nav a{
-		font-size: 0.90em;
-		margin-right: 0.5em;
-	}
 
 	.box_shadow{
 	    box-shadow: 1px 1px 0px $textgrey,

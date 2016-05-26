@@ -26,15 +26,10 @@ h2,
 @media (min-width : 768px ){
 
   .profile-text{
-    width: 50%;
-    float: left;
+      width: 50%;
+      float: left;
+      p{
+        margin: 0;
+      }    
+    }
   }
-  .profile-text{
-    p{
-      margin: 0;
-    }    
-  }
-}
-@media (min-width : 1024px ){
-
-}

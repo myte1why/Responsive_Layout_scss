@@ -16,13 +16,16 @@
 		margin-left: 5%;
 		width: 20%;
 		float: left;
-	}
-}
-@media (min-width : 768px ) {
-
-	.knowledge{
 		li{
 			padding-bottom:1em; 
 		}
-	} 
+	}
+}
+
+.hide{
+	@media #{$brk-narrow}{
+		margin-top: 2em;
+		float: left;
+		display: inline-block;
+		}
 }
