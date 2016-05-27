@@ -1,12 +1,12 @@
 * {
 	box-sizing: border-box;
-	font-size: 14px;
+	font-size: $standart-font;
 }
 body {
 	@include text($standart-font, 1.5, $color: $black); 
 	position: relative;
 	background: rgba(241, 241, 241, 0.7);
-	@media #{$brk-narrow}{		
+	 @include tablet {		
 		background:linear-gradient(white 45%, darkgrey);
 	}
 }
@@ -14,16 +14,16 @@ body {
 /* link styles */
 a {	
 	&:link {	
-		@include text($standart-font, 1.5, $color: $textgrey); 	
+		@include text($standart-font, $line-height, $color: $textgrey); 	
 		@extend %displayBlock;
 		text-decoration: none;
 		color: $textgrey;
 	}
 	&:hover {
-		@include text($medium-font, 1.5, $color: #6633ff); 
+		@include text($medium-font, $line-height, $color: $hover); 
 	}
 	&:visited{	
-		@include text($standart-font, 1.5, $color: $textgrey);
+		@include text($standart-font, $line-height, $color: $textgrey);
 	}
 }
 
@@ -40,7 +40,7 @@ footer a,
 			color: $black;
 		}
 
-	@media #{$brk-narrow}{		
+	 @include tablet {		
 		font-size: $standart-font;
 		margin-right: 0.5em;
 	}
@@ -50,7 +50,7 @@ footer a,
 .hide{
 	display: none;
 }
-@media (min-width : 768px ) {
+ @include tablet {
 
 	.box_shadow{
 	    box-shadow: 1px 1px 0px $textgrey,
@@ -61,7 +61,7 @@ footer a,
                 6px 6px 0px $textgrey;
 	}
 }
-@media (min-width : 1024px ){
+@include desktop {
 	
 	.name{
 		float: left;

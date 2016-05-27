@@ -6,21 +6,21 @@
 	width: 100%;
 }
 
-@media (min-width : 768px ){
+ @include tablet {
 
 	.menu{
 		padding-right: 2px;
 	}
 }
-@media (min-width : 1024px ){
+@include desktop {
 
 	.main-nav li{
-		font-size: 14px;
+		font-size: $standart-font;
 		padding-left: 2px;
 		width: auto;
 	}
 	footer li{
-		font-size: 14px;
+		font-size: $standart-font;
 		margin-left: 10px;
 
 	}

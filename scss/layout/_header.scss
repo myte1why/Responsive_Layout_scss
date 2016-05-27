@@ -3,13 +3,13 @@ header{
 	background-color: $grey;
 }
 .main-nav{
-	@media #{$brk-narrow}{
+	@include tablet {
 	 li{
 		width: auto;
 		display: inline-block;
 		}
 	}
-	@media #{$brk-wide}{
+	@include desktop {
 		float: right;
 		padding-top: 1em;
 	}
